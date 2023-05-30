@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Genesis - Download</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Styles spécifiques à la page de téléchargement */
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #000;
+      font-family: Arial, sans-serif;
+      color: #fff;
+    }
+
+    #stars-container {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+    }
+
+    #download {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+
+    #download h1 {
+      font-size: 72px;
+      margin-bottom: 40px;
+      text-align: center;
+    }
+
+    #download p {
+      font-size: 36px;
+      margin-bottom: 60px;
+      text-align: center;
+    }
+
+    #download button {
+      padding: 20px 60px;
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 10px;
+      font-size: 36px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    #download button:hover {
+      background-color: #0056b3;
+    }
+  </style>
+  <script>
+    // Script pour ajouter une ambiance cosmique
+    document.addEventListener("DOMContentLoaded", function() {
+      var canvas = document.createElement("canvas");
+      var context = canvas.getContext("2d");
+      var starsContainer = document.getElementById("stars-container");
+      var width = window.innerWidth;
+      var height = window.innerHeight;
+      var numStars = 200;
+      var stars = [];
+
+      function initializeCanvas() {
+        canvas.width = width;
+        canvas.height = height;
+        starsContainer.appendChild(canvas);
+      }
+
+      function createStar() {
+        var x = Math.random() * width;
+        var y = Math.random() * height;
+        var radius = Math.random() * 2;
+        var blur = Math.random() * 10;
+
+        return {
+          x: x,
+          y: y,
+          radius: radius,
+          blur: blur
+        };
+      }
+
+      function createStars() {
+        for (var i = 0; i < numStars; i++) {
+          stars.push(createStar());
+        }
+      }
+
+      function drawStars() {
+        context.clearRect(0, 0, width, height);
+
+        for (var i = 0; i < numStars; i++) {
+          var star = stars[i];
+          context.beginPath();
+          context.arc(star.x, star.y, star.radius, 0, 2 * Math.PI);
+          context.fillStyle = "rgba(255, 255, 255, 0.8)";
+          context.shadowColor = "rgba(255, 255, 255, 0.8)";
+          context.shadowBlur = star.blur;
+          context.fill();
+        }
+
+        requestAnimationFrame(drawStars);
+      }
+
+      initializeCanvas();
+      createStars();
+      drawStars();
+    });
+  </script>
+</head>
+<body>
+  <script src="leader.html"></script>
+
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="story.html">Our Story</a></li>
+      <li><a href="characters.html">Characters</a></li>
+      <li><a href="download.html">Download</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <div id="stars-container"></div>
+
+  <main id="download">
+    <h1>Download Genesis</h1>
+    <p>Embark on an epic space adventure!</p>
+    <button>Download Now</button>
+  </main>
+
+  <footer>
+    <p>&copy; 2023 Genesis. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

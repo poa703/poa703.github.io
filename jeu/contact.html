@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Genesis - Contact</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Styles spécifiques à la page de contact */
+    #contact {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 50px 0;
+    }
+
+    #contact-info {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    #contact-info h2 {
+      font-size: 30px;
+      margin-bottom: 20px;
+    }
+
+    #contact-info p {
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
+
+    #contact-info ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    #contact-info li {
+      margin-bottom: 5px;
+    }
+
+    #contact-form {
+      text-align: center;
+    }
+
+    #contact-form h2 {
+      font-size: 30px;
+      margin-bottom: 20px;
+    }
+
+    #contact-form form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    #contact-form label {
+      font-size: 18px;
+      margin-bottom: 5px;
+    }
+
+    #contact-form input,
+    #contact-form textarea {
+      width: 300px;
+      padding: 10px;
+      margin-bottom: 10px;
+      border: none;
+      border-radius: 5px;
+    }
+
+    #contact-form button {
+      padding: 10px 20px;
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      font-size: 18px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <script src="leader.html"></script>
+
+  <nav>
+    <ul>
+      <li><a href="index.html">Accueil</a></li>
+      <li><a href="story.html">Notre histoire</a></li>
+      <li><a href="characters.html">Personnages</a></li>
+      <li><a href="download.html">Téléchargement</a></li>
+      <li><a href="gallery.html">Galerie</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <main id="contact">
+    <section id="contact-info">
+      <h2>Contactez-nous</h2>
+      <p>Pour toute question ou demande, n'hésitez pas à nous contacter :</p>
+      <ul>
+        <li>Email: contact@genesisgame.com</li>
+        <li>Téléphone: +1234567890</li>
+        <li>Adresse: 123 Rue des Étoiles, Planète Alpha</li>
+      </ul>
+    </section>
+
+    <section id="contact-form">
+      <h2>Formulaire de contact</h2>
+      <form>
+        <label for="name">Nom :</label>
+        <input type="text" id="name" name="name" placeholder="Votre nom" required>
+
+        <label for="email">Email :</label>
+        <input type="email" id="email" name="email" placeholder="Votre email" required>
+
+        <label for="message">Message :</label>
+        <textarea id="message" name="message" placeholder="Votre message" required></textarea>
+
+        <button type="submit">Envoyer</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2023 Genesis. Tous droits réservés.</p>
+  </footer>
+
+  <section id="stars-container"></section>
+
+  <script src="script.js"></script>
+</body>
+</html>
