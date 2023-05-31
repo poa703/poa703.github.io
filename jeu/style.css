@@ -1,74 +1,68 @@
 /* style.css */
+@import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,8,900&display=swap');
+*
 
-/* Styles de base pour la barre de menu */
-nav {
-    background-color: #333;
-  }
-  
-  nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
-  
-  nav ul li {
-    display: inline-block;
-  }
-  
-  nav ul li a {
-    display: block;
-    padding: 10px 20px;
-    color: #fff;
-    text-decoration: none;
-    transition: background-color 0.3s ease;
-  }
-  
-  /* Effet de survol pour les liens de la barre de menu */
-  nav ul li a:hover {
-    background-color: #555;
-  }
+{
+  margin: 0;
+  padding: 0;
+  box-sizing : border-box;
+  font-family: 'Poppins', sans-serif;
+}
+h1, h2, h3, p {
+  color: #FFFFFF; /* Couleur blanche pour le texte */
+}
 
-  body {
-    background: #000000; /* Couleur de fond noire */
-    background-image: url("chemin-vers-ton-image-d-etoiles.jpg");
-    background-repeat: repeat;
-    background-position: center center;
-    background-attachment: fixed;
-    background-size: cover;
-  }
-  
-  
 
-  h1, h2, h3, p {
-    color: #FFFFFF; /* Couleur blanche pour le texte */
-  }
-  
-  a {
-    color: #00FFFF; /* Couleur cyan pour les liens */
-    text-decoration: none;
-  }
-  
-  a:hover {
-    text-decoration: underline;
-  }
-  
-  
+header{
+  position: absolute;
+  top:0;
+  left:0;
+  width: 100%;
+  padding : 30px 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
-  @keyframes twinkling {
-    0% {
-      opacity: 1;
-    }
-    50% {
-      opacity: 0.5;
-    }
-    100% {
-      opacity: 1;
-    }
-  }
-  
-  .star {
-    animation: twinkling 3s infinite;
-  }
+
+header ul
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header ul li{
+  list-style: none;
+  margin-left: 20px;
+
+}
+header ul li a{
+  text-decoration: none;
+  padding: 6px 15px;
+  color: #fff;
+  border-radius: 20px;
+}
+
+.indent {
+  margin-left: 1%;
+  text-indent: 40px;
+}
+.margin{
+  margin-left: 1%;
+}
+
+div {
+  text-align: center;
+}
+
+
+header ul li a:hover
+{
+  background: #fff;
+  color : #241571;
+}
+
   /* Exemple de styles pour le bouton */
 #start-button {
     background-color: #FFA500; /* Couleur orange */
@@ -84,6 +78,7 @@ nav {
     background-color: #FF8C00; /* Couleur orange foncé au survol */
   }
   
+
 /* Styles pour l'effet d'étoiles en arrière-plan */
 body {
   background: #000000; /* Couleur de fond noire */
