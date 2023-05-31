@@ -163,3 +163,9 @@ body {
   background-color: white;
   border-radius: 50%;
 }
+
+#left {
+  position: absolute;
+  left: 0;
+  
+}
