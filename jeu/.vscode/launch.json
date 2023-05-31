@@ -1,0 +1,10 @@
+{
+    "configurations": [
+        {
+            "type": "chrome",
+            "name": "http://127.0.0.1:3002/Screenshot%202023-05-31%20at%2007.05.03.png",
+            "request": "launch",
+            "url": "http://127.0.0.1:3002/Screenshot%202023-05-31%20at%2007.05.03.png"
+        }
+    ]
+}
